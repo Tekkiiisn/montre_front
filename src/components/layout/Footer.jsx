@@ -11,9 +11,9 @@ export default function Footer() {
 
           {/* Colonne 1 — Marque */}
           <div className="flex flex-col items-center sm:items-start gap-3">
-            <img src={logo} alt="Sunulunettes" className="h-10 w-auto brightness-200" />
+            <img src={logo} alt="SenMontre" className="h-10 w-auto brightness-200" />
             <p className="text-xs text-gray-500 text-center sm:text-left leading-relaxed">
-              Lunettes de qualité livrées partout au Sénégal. Style, confort et protection pour toute la famille.
+              Montres de qualité livrées partout au Sénégal. Style, élégance et fiabilité pour toute la famille.
             </p>
           </div>
 
@@ -34,7 +34,7 @@ export default function Footer() {
 
         {/* Bas de page */}
         <div className="pt-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-600">
-          <span>© {new Date().getFullYear()} <span className="text-gray-400 font-semibold">Sunulunettes</span> — Tous droits réservés</span>
+          <span>© {new Date().getFullYear()} <span className="text-gray-400 font-semibold">SenMontre</span> — Tous droits réservés</span>
           
         </div>
 
