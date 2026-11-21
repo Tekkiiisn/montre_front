@@ -41,7 +41,7 @@ const toArray = (v) => {
 }
 
 const VOICE_URL = import.meta.env.VITE_PRODUCT_VOICE_URL
-  || 'https://ik.imagekit.io/fzviw5sky/boutique/audios/explicatttion-edited.mp3'
+  || 'https://ik.imagekit.io/uuj391tso/boutique/audio/Montre%20homme.mp3'
 
 const FAQ = [
   { q: "Comment se passe la livraison ?", a: "La livraison est gratuite partout à Dakar. Après votre commande, nous vous contactons pour confirmer l'adresse et le créneau." },
