@@ -45,8 +45,8 @@ const VOICE_URL = import.meta.env.VITE_PRODUCT_VOICE_URL
 
 const FAQ = [
   { q: "Comment se passe la livraison ?", a: "La livraison est gratuite partout à Dakar. Après votre commande, nous vous contactons pour confirmer l'adresse et le créneau." },
-  { q: "Comment j'obtiens la montre offerte ?", a: "Pour chaque lunette commandée, une montre vous est offerte. Rien à ajouter au panier : elle est incluse dans votre commande." },
-  { q: "Puis-je échanger ou retourner ma lunette ?", a: "Oui. Si le modèle ne vous convient pas, contactez-nous et nous organisons le retour ou l'échange." },
+  { q: "Comment j'obtiens le cadeau offert ?", a: "Pour chaque montre commandée, un cadeau vous est offert. Rien à ajouter au panier : il est inclus dans votre commande." },
+  { q: "Puis-je échanger ou retourner ma montre ?", a: "Oui. Si le modèle ne vous convient pas, contactez-nous et nous organisons le retour ou l'échange." },
   { q: "Le paiement est-il sécurisé ?", a: "Oui. Vous validez votre commande sur un formulaire sécurisé et vous recevez une confirmation." },
 ]
 
@@ -326,7 +326,7 @@ function VideoSection({ video, poster, onPlay }) {
   return (
     <section className="mt-14">
       <h2 className="text-xl sm:text-2xl font-black text-gray-800 mb-1">Voyez-la en vidéo</h2>
-      <p className="text-sm text-gray-500 mb-5">La finition, la monture et le rendu, comme si vous l'aviez en main.</p>
+      <p className="text-sm text-gray-500 mb-5">La finition, le cadran et le bracelet, comme si vous l'aviez au poignet.</p>
       <div className="relative mx-auto max-w-3xl aspect-[4/5] sm:aspect-video rounded-2xl overflow-hidden bg-black shadow-sm">
         {started ? (
           <video ref={ref} src={video.url} controls playsInline preload="auto"
@@ -416,7 +416,7 @@ function WhatsappProof({ shots }) {
    Petits blocs
    ════════════════════════════════════════════════════════════════ */
 function PromoMarquee() {
-  const message = '🎁 Chaque lunette achetée = une montre OFFERTE  •  🚚 Livraison GRATUITE partout à Dakar'
+  const message = '🎁 Chaque montre achetée = un cadeau OFFERT  •  🚚 Livraison GRATUITE partout à Dakar'
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-primary-600 to-primary-500 text-white py-2.5 mb-5 rounded-xl shadow-sm">
       <style>{`
@@ -448,7 +448,7 @@ function Steps() {
   const steps = [
     { t: "Choisissez votre modèle", d: "Sélectionnez la quantité puis touchez « Commander »." },
     { t: "Renseignez vos informations", d: "Nom, téléphone et adresse à Dakar. Cela prend moins d'une minute." },
-    { t: "Recevez votre lunette et votre montre", d: "Livraison gratuite à Dakar, la montre offerte est dans le colis." },
+    { t: "Recevez votre montre et votre cadeau", d: "Livraison gratuite à Dakar, le cadeau offert est dans le colis." },
   ]
   return (
     <section className="mt-14">
@@ -507,7 +507,7 @@ function CatalogueCTA() {
           <p className="text-sm text-gray-500">Des dizaines de modèles disponibles, pour homme et femme.</p>
         </div>
         <a
-          href="https://sunulunettes.shop"
+          href="https://www.senmontre.site"
           target="_blank"
           rel="noopener noreferrer"
           className="shrink-0 flex items-center gap-2 px-6 py-3 rounded-xl font-black text-sm
@@ -580,7 +580,7 @@ export default function ProductDetailPage() {
   return (
     <>
       <Helmet>
-        <title>{product.name} — Sunulunettes</title>
+        <title>{product.name} — SenMontre</title>
         <meta name="description" content={product.description || product.name} />
         {images[0]?.url && <meta property="og:image" content={images[0].url} />}
         {images[0]?.url && <link rel="preload" as="image" href={ik(images[0].url, 900)} />}
@@ -640,7 +640,7 @@ export default function ProductDetailPage() {
               <div className="flex items-start gap-3 rounded-2xl border border-primary-200 bg-primary-50 p-4 mb-5">
                 <Gift size={22} className="text-primary-600 shrink-0 mt-0.5" />
                 <div className="text-sm">
-                  <p className="font-bold text-primary-800">Une montre offerte avec cette lunette</p>
+                  <p className="font-bold text-primary-800">Un cadeau offert avec cette montre</p>
                   <p className="text-primary-700/80">Livraison gratuite partout à Dakar.</p>
                 </div>
               </div>
@@ -723,7 +723,7 @@ export default function ProductDetailPage() {
         {!outOfStock && (
           <section className="mt-14 rounded-3xl bg-gradient-to-br from-primary-600 to-primary-500 text-white p-6 sm:p-10 text-center">
             <h2 className="text-xl sm:text-2xl font-black mb-2">Votre {product.name} vous attend</h2>
-            <p className="text-white/90 text-sm sm:text-base mb-5">Une montre offerte et la livraison gratuite à Dakar.</p>
+            <p className="text-white/90 text-sm sm:text-base mb-5">Un cadeau offert et la livraison gratuite à Dakar.</p>
             <button onClick={handleQuickBuy}
               className="inline-flex items-center justify-center gap-2 bg-white text-primary-700 font-black rounded-xl px-8 py-3.5 active:scale-[0.98] transition">
               <Zap size={18} fill="currentColor" />
